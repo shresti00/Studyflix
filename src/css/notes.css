@@ -16,8 +16,8 @@ a {
   .notes-body {
     font-family: "Segoe UI", sans-serif;
     background: radial-gradient(circle at 15% 20%, #9b0000 0%, #1a0000 40%, #000000 80%);
+    background-attachment: fixed;
     color: white;
-    min-height: 100vh;
   }
   .main {
   min-height: calc(100vh - 75px); /* subtract navbar height */
