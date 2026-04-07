@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useProfile } from '../context/ProfileContext';
 import sfIcon from '../assets/images/sf.png';
+import '../css/navbar.css';
 
 export default function Navbar() {
   const { profile } = useProfile();
@@ -9,7 +10,7 @@ export default function Navbar() {
   const path = location.pathname;
 
   return (
-    <nav className="navbar" style={path === '/profile' ? { position: 'fixed', top: 0, width: '100%', padding: '0 80px', height: '75px' } : {}}>
+    <nav className="navbar">
       <div className="logo">
         <img src={sfIcon} alt="SF Logo" className="logo-img" />
         <span>StudyFlix</span>
@@ -22,9 +23,7 @@ export default function Navbar() {
       </ul>
       
       <div className="profile">
-        {path !== '/playlists' && path !== '/notes' && path !== '/todo' ? (
-           <span className="streak">🔥 {profile?.streak || 0}</span>
-        ) : null}
+        <span className="streak">🔥 {profile?.streak || 0}</span>
         <Link to="/profile">
           {profile?.profilePicture ? (
             <img 

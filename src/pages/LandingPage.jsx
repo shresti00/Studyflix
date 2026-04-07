@@ -195,7 +195,7 @@ export default function LandingPage() {
                   onChange={(e) => setSelectedSeason(Number(e.target.value))}
                   style={{ background: '#242424', color: 'white', padding: '10px 15px', fontSize: '1.1rem', border: '1px solid #444', borderRadius: '4px', cursor: 'pointer', outline: 'none' }}
                 >
-                  {[1,2,3,4,5,6,7].map(num => <option key={num} value={num}>Module {num} (Season {num})</option>)}
+                  {[1,2,3,4,5,6,7].map(num => <option key={num} value={num}>Module {num}</option>)}
                 </select>
               </div>
 
