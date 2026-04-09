@@ -47,9 +47,7 @@ export const ProfileProvider = ({ children }) => {
       
       data.lastVisited = new Date().toISOString();
 
-      // Add a login activity point for the heatmap
-      if (!data.activityLog) data.activityLog = {};
-      data.activityLog[today] = (data.activityLog[today] || 0) + 1;
+      // Tracking logins to heatmap has been removed as per user request. 
 
       localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
     }
